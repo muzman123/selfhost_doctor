@@ -1,0 +1,17 @@
+# Compiled binaries
+/selfhost-doctor
+/selfhost-doctor.exe
+*.exe
+*.test
+
+# Go build/test artifacts
+*.out
+coverage.*
+
+# Editor / OS cruft
+.DS_Store
+.idea/
+.vscode/
+
+# Local tooling
+.claude/
