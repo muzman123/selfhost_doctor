@@ -1,6 +1,6 @@
-# selfhost-doctor 🩺
+# selfhost-doctor, a simple Go project
 
-**One command that tells you what's wrong with your homelab — before the internet does.**
+**One command that tells you what's wrong with your homelab before the internet does.**
 
 ```
 $ selfhost-doctor
