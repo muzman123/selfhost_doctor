@@ -71,29 +71,3 @@ Run it weekly from cron and get pinged only when something regresses:
   less bad than read-write. Repeat findings get diminishing score penalties.
   An auditor that cries wolf gets uninstalled.
 
-## Adding a check
-
-Every rule is one small file implementing one interface:
-
-```go
-type Check interface {
-    ID() string
-    Describe() string
-    Run(t *Target) []Finding
-}
-```
-
-Write your check in `internal/checks/`, add one line to `Registry()`, add a test.
-That's the whole contribution. Good first issues are labeled.
-
-## Roadmap
-
-- [ ] Scan `docker-compose.yml` files directly (audit before you deploy)
-- [ ] Reverse-proxy config parsing (Caddy/Traefik/nginx) to map what's actually public
-- [ ] External vantage-point port scan (opt-in)
-- [ ] Update-lag check via registry digests
-- [ ] `--fix` mode that prints a patched compose file diff
-
-## License
-
-MIT
